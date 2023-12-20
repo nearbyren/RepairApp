@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.repair.apps">
+    <!--如果使用了BLUETOOTH_ADMIN权限，那么必须使用BLUETOOTH权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!--android6.0后需要搜索周边蓝牙设备，需要添加以下两个权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--要求设备硬件必须支持蓝牙-->
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+
+    <application
+        android:name="com.repair.apps.RepairApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="RepairApp"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App"
+        tools:replace="android:name">
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <activity
+            android:name="com.repair.apps.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

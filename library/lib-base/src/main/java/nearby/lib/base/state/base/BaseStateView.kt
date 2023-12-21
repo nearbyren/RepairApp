@@ -4,11 +4,7 @@ import android.content.Context
 import android.view.View
 import nearby.lib.base.state.StateBox
 import nearby.lib.base.state.util.IoUtils
-import java.io.ByteArrayInputStream
-import java.io.ByteArrayOutputStream
-import java.io.ObjectInputStream
-import java.io.ObjectOutputStream
-import java.io.Serializable
+import java.io.*
 
 
 abstract class BaseStateView : Serializable, Cloneable {

@@ -14,6 +14,7 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import nearby.lib.base.R
 import nearby.lib.base.activity.ViewBehavior
+import nearby.lib.router.Router
 
 
 /**
@@ -40,7 +41,7 @@ abstract class BaseDialogFragment2 : AppCompatDialogFragment(), CoroutineScope b
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        Router.inject(this)
+        if (Router.isOpen()) Router.inject(this) else println("非组件化模式")
         setStyle(
             if (getDialogStyle() != null) getDialogStyle()!! else STYLE_NO_TITLE,
             if (getDialogTheme() != null) getDialogTheme()!! else R.style.lib_uikit_CommonDialog

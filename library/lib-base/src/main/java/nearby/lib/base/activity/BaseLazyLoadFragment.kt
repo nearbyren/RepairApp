@@ -102,13 +102,11 @@ abstract class BaseLazyLoadFragment : Fragment(), ViewBehavior, NetworkListenerH
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Router.inject(this)
+        if (Router.isOpen()) Router.inject(this) else println("非组件化模式")
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         rootView?.let {

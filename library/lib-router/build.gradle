@@ -1,8 +1,4 @@
-import composing.builds.BuildConfig
-import composing.builds.Google
-import composing.builds.Testing
-import composing.builds.ThirdLib
-
+import composing.builds.*
 plugins {
     id 'com.android.library'
     id 'composing.builds'
@@ -58,7 +54,7 @@ dependencies {
     androidTestImplementation Testing.androidJunit
     androidTestImplementation Testing.espresso
 
-    implementation ThirdLib.Arouter.arouterApi
-    kapt ThirdLib.Arouter.arouterCompiler
+    implementation Lib.arouterApi
+    kapt Lib.arouterCompiler
     implementation Google.gson
 }

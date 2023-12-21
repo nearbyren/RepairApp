@@ -38,8 +38,7 @@ object Compose {
     const val uiTestJunt = "androidx.compose.ui:ui-test-junit4:1.1.1"
     const val lifeVmComp = "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
 
-    const val hiltAnd = "com.google.dagger:hilt-android:2.48"
-    const val hiltAndComp = "com.google.dagger:hilt-android-compiler:2.48"
+
 
     const val junit = "junit:junit:4.13.2"
 

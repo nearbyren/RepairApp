@@ -5,7 +5,13 @@ import android.os.Handler
 import android.view.Gravity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.repair.apps.R
+import com.repair.apps.adapter.ItemIndexContentTagAdapter
 import com.repair.apps.databinding.FragmentIndex1Binding
+import com.repair.apps.dialog.RequestDialogFragment
+import com.repair.apps.dialog.SignOutDialogFragment
+import com.repair.apps.http.IndexViewModel
+import com.repair.apps.model.AdBannerDto
+import com.repair.apps.model.IndexItemTagDto
 import com.youth.banner.indicator.RectangleIndicator
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.mvvm.fragment.BaseAppBVMFragment
@@ -27,19 +33,19 @@ class IndexFragment1 : BaseAppBVMFragment<FragmentIndex1Binding, IndexViewModel>
         return R.layout.fragment_index_1
     }
 
-    private var indexAdv: ArrayList<Advertise> = arrayListOf()
-    private var activityItems = mutableListOf<IndexItemAdDto>()
-    private val indexTagAdapter by lazy { IndexTagAdapter() }
+    private var indexAdv: ArrayList<AdBannerDto> = arrayListOf()
+    private var activityItems = mutableListOf<IndexItemTagDto>()
+    private val indexTagAdapter by lazy { ItemIndexContentTagAdapter() }
     override fun initialize(savedInstanceState: Bundle?) {
-        activityItems.add(IndexItemAdDto("水喉渠務", R.drawable.item1))
-        activityItems.add(IndexItemAdDto("防漏防水", R.drawable.item2))
-        activityItems.add(IndexItemAdDto("門窗", R.drawable.item3))
-        activityItems.add(IndexItemAdDto("木工", R.drawable.item4))
-        activityItems.add(IndexItemAdDto("廢物處理", R.drawable.item1))
-        activityItems.add(IndexItemAdDto("冷氣", R.drawable.item2))
-        activityItems.add(IndexItemAdDto("電燈", R.drawable.item3))
-        activityItems.add(IndexItemAdDto("定期保養", R.drawable.item4))
-        activityItems.add(IndexItemAdDto("其他", R.drawable.item1))
+        activityItems.add(IndexItemTagDto("水喉渠務", R.drawable.item1))
+        activityItems.add(IndexItemTagDto("防漏防水", R.drawable.item2))
+        activityItems.add(IndexItemTagDto("門窗", R.drawable.item3))
+        activityItems.add(IndexItemTagDto("木工", R.drawable.item4))
+        activityItems.add(IndexItemTagDto("廢物處理", R.drawable.item1))
+        activityItems.add(IndexItemTagDto("冷氣", R.drawable.item2))
+        activityItems.add(IndexItemTagDto("電燈", R.drawable.item3))
+        activityItems.add(IndexItemTagDto("定期保養", R.drawable.item4))
+        activityItems.add(IndexItemTagDto("其他", R.drawable.item1))
         indexTagAdapter.setItems(activityItems)
         binding.recycle.adapter = indexTagAdapter
         binding.recycle.layoutManager = GridLayoutManager(context, 3)
@@ -47,13 +53,15 @@ class IndexFragment1 : BaseAppBVMFragment<FragmentIndex1Binding, IndexViewModel>
         binding.recycle.setHasFixedSize(true)
         binding.recycle.itemAnimator = null
         indexTagAdapter.setOnItemClickListener(listener = object :
-            BaseRecyclerAdapter.OnItemClickListener<IndexItemAdDto> {
-            override fun onItemClick(holder: Any, item: IndexItemAdDto, position: Int) {
+            BaseRecyclerAdapter.OnItemClickListener<IndexItemTagDto> {
+            override fun onItemClick(holder: Any, item: IndexItemTagDto, position: Int) {
+                val request = RequestDialogFragment()
+                request.show(this@IndexFragment1)
             }
         })
-        indexAdv.add(Advertise(pictureUrl = "", pictureUrlInt = R.drawable.ad_banner))
-        indexAdv.add(Advertise(pictureUrl = "", pictureUrlInt = R.drawable.ad_banner))
-        indexAdv.add(Advertise(pictureUrl = "", pictureUrlInt = R.drawable.ad_banner))
+        indexAdv.add(AdBannerDto(pictureUrl = "", pictureUrlInt = R.drawable.ad_banner))
+        indexAdv.add(AdBannerDto(pictureUrl = "", pictureUrlInt = R.drawable.ad_banner))
+        indexAdv.add(AdBannerDto(pictureUrl = "", pictureUrlInt = R.drawable.ad_banner))
         binding.adBanner.addBannerLifecycleObserver(this)
         binding.adBanner.setBannerRound(20f)
         binding.adBanner.indicator = RectangleIndicator(requireActivity())

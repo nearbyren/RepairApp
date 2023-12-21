@@ -1,8 +1,4 @@
-import composing.builds.AndroidX
-import composing.builds.BuildConfig
-import composing.builds.Testing
-import composing.builds.ThirdLib
-
+import composing.builds.*
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -208,11 +204,11 @@ dependencies {
     api project(path: ':library:lib-netwrok')
     api project(path: ':library:lib-base')
     api project(path: ':library:lib-router')
-    api ThirdLib.smarttablayout
-    api ThirdLib.smarttablayoutUtils
+    api Lib.smarttablayout
+    api Lib.smarttablayoutUtils
     api AndroidX.constraintlayout.constraintLayout
     api 'me.jessyan:autosize:1.2.1'
-    api ThirdLib.Banner.youth
+    api Lib.youth
     api "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
 }

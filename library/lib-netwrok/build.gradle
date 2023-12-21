@@ -1,8 +1,4 @@
-import composing.builds.BuildConfig
-import composing.builds.Google
-import composing.builds.Testing
-import composing.builds.ThirdLib
-
+import composing.builds.*
 plugins {
     id 'com.android.library'
     id 'composing.builds'
@@ -50,14 +46,14 @@ dependencies {
     androidTestImplementation Testing.espresso
 
     api Google.gson
-    api ThirdLib.Okhttp3.retrofit
-    api ThirdLib.Okhttp3.converterCalars
-    api ThirdLib.Okhttp3.retrofitConverterGson
-    api ThirdLib.Okhttp3.adapterRxjava
-    api ThirdLib.Okhttp3.adapterRxjava2
-    api ThirdLib.Okhttp3.okhttp3
-    api ThirdLib.Okhttp3.conscryptAndroid
-    api ThirdLib.Fastjson.fastjson
+    api Lib.retrofit
+    api Lib.converterCalars
+    api Lib.retrofitConverterGson
+    api Lib.adapterRxjava
+    api Lib.adapterRxjava2
+    api Lib.okhttp3
+    api Lib.conscryptAndroid
+    api Lib.fastjson
     implementation project(path: ':library:lib-base')
     //apache StringUtils导入
     api "org.apache.commons:commons-lang3:3.7"

@@ -13,6 +13,7 @@
         <item name="android:statusBarColor">@color/transparent</item>
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@style/activityAnim</item>
+        <item name="android:windowIsTranslucent">true</item>
 <!--        <item name="android:windowBackground">@color/white</item>-->
         <!-- 设置无标题
         <item name="android:windowNoTitle">true</item>

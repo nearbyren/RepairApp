@@ -3,6 +3,7 @@ package com.repair.apps.fragment
 import android.os.Bundle
 import com.repair.apps.R
 import com.repair.apps.databinding.FragmentIndex3Binding
+import com.repair.apps.http.IndexViewModel
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.mvvm.fragment.BaseAppBVMFragment
 

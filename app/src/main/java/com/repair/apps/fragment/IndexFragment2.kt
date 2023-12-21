@@ -3,7 +3,10 @@ package com.repair.apps.fragment
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.repair.apps.R
+import com.repair.apps.adapter.itemServiceStatusAdapter
 import com.repair.apps.databinding.FragmentIndex2Binding
+import com.repair.apps.http.IndexViewModel
+import com.repair.apps.model.ServiceDto
 import nearby.lib.base.bar.BarHelperConfig
 
 import nearby.lib.mvvm.fragment.BaseAppBVMFragment
@@ -26,18 +29,18 @@ class IndexFragment2 :
         return R.layout.fragment_index_2
     }
 
-    private var activityItems = mutableListOf<IndexItemAdDto2>()
-    private val indexTagAdapter by lazy { IndexTagAdapter2() }
+    private var activityItems = mutableListOf<ServiceDto>()
+    private val indexTagAdapter by lazy { itemServiceStatusAdapter() }
     override fun initialize(savedInstanceState: Bundle?) {
-        activityItems.add(IndexItemAdDto2("水喉渠務"))
-        activityItems.add(IndexItemAdDto2("防漏防水"))
-        activityItems.add(IndexItemAdDto2("門窗"))
-        activityItems.add(IndexItemAdDto2("木工"))
-        activityItems.add(IndexItemAdDto2("廢物處理"))
-        activityItems.add(IndexItemAdDto2("冷氣"))
-        activityItems.add(IndexItemAdDto2("電燈"))
-        activityItems.add(IndexItemAdDto2("定期保養"))
-        activityItems.add(IndexItemAdDto2("其他"))
+        activityItems.add(ServiceDto("水喉渠務"))
+        activityItems.add(ServiceDto("防漏防水"))
+        activityItems.add(ServiceDto("門窗"))
+        activityItems.add(ServiceDto("木工"))
+        activityItems.add(ServiceDto("廢物處理"))
+        activityItems.add(ServiceDto("冷氣"))
+        activityItems.add(ServiceDto("電燈"))
+        activityItems.add(ServiceDto("定期保養"))
+        activityItems.add(ServiceDto("其他"))
         indexTagAdapter.setItems(activityItems)
         binding.recycle.adapter = indexTagAdapter
         binding.recycle.layoutManager = LinearLayoutManager(context)
@@ -45,8 +48,8 @@ class IndexFragment2 :
         binding.recycle.setHasFixedSize(true)
         binding.recycle.itemAnimator = null
         indexTagAdapter.setOnItemClickListener(listener = object :
-            BaseRecyclerAdapter.OnItemClickListener<IndexItemAdDto2> {
-            override fun onItemClick(holder: Any, item: IndexItemAdDto2, position: Int) {
+            BaseRecyclerAdapter.OnItemClickListener<ServiceDto> {
+            override fun onItemClick(holder: Any, item: ServiceDto, position: Int) {
             }
         })
     }

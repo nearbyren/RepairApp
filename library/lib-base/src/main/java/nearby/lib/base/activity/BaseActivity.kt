@@ -43,8 +43,7 @@ abstract class BaseActivity : AppCompatActivity(), ViewBehavior, NetworkListener
             //这样半透明+白=灰, 状态栏的文字能看得清
             SystemUIUtils.setStatusBarColor(this, 0x55000000);
         }
-
-        Router.inject(this)
+        if (Router.isOpen()) Router.inject(this) else println("非组件化模式")
         initIntent()
         initContentView()
         initViewHeader()

@@ -1,6 +1,4 @@
-import composing.builds.BuildConfig
-import composing.builds.Testing
-
+import composing.builds.*
 plugins {
     id 'com.android.library'
     id 'composing.builds'
@@ -43,8 +41,5 @@ android {
 }
 
 dependencies {
-    testImplementation Testing.jUnit
-    androidTestImplementation Testing.androidJunit
-    androidTestImplementation Testing.espresso
     implementation project(path: ':library:lib-base')
 }

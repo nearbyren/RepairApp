@@ -1,5 +1,7 @@
 package nearby.lib.base.state.base
 
+import java.util.*
+
 object ViewCache {
     private val mCache: MutableMap<Class<out BaseStateView?>?, BaseStateView?> =
         HashMap<Class<out BaseStateView?>?, BaseStateView?>()

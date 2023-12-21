@@ -1,5 +1,4 @@
 import composing.builds.*
-
 plugins {
     id 'com.android.library'
     id 'composing.builds'
@@ -76,33 +75,33 @@ dependencies {
     api AndroidX.Lifecycle.lcyExt
 
 
-    api ThirdLib.Okhttp3.retrofit
-    api ThirdLib.Okhttp3.converterCalars
-    api ThirdLib.Okhttp3.retrofitConverterGson
-    api ThirdLib.Okhttp3.adapterRxjava
-    api ThirdLib.Okhttp3.adapterRxjava2
-    api ThirdLib.Okhttp3.okhttp3
-    api ThirdLib.Okhttp3.conscryptAndroid
+    api Lib.retrofit
+    api Lib.converterCalars
+    api Lib.retrofitConverterGson
+    api Lib.adapterRxjava
+    api Lib.adapterRxjava2
+    api Lib.okhttp3
+    api Lib.conscryptAndroid
 
 
-    api ThirdLib.Rxjava.rxandroid
-    api ThirdLib.Rxjava.rxbinding2
+    api Lib.rxandroid
+    api Lib.rxbinding2
 
 
-    api ThirdLib.Glide.glide
-    api ThirdLib.Glide.glideCompiler
-    api ThirdLib.Fastjson.fastjson
-//    api ThirdLib.Immersionbar.immersionbar
+    api Lib.glide
+    api Lib.glideCompiler
+    api Lib.fastjson
+//    api Lib.Immersionbar.immersionbar
     api 'com.gyf.immersionbar:immersionbar:3.0.0'
 
-    api ThirdLib.Lottie.lottie
+    api Lib.lottie
 
     api AndroidX.Navigation.kotCorAnd
     api AndroidX.Navigation.kotCorCor
     api AndroidX.Navigation.kotlinStdlib
 
-    implementation ThirdLib.Arouter.arouterApi
-    kapt ThirdLib.Arouter.arouterCompiler
+    implementation Lib.arouterApi
+    kapt Lib.arouterCompiler
     implementation project(path: ':library:lib-router')
     api project(path: ':library:lib-uikit')
 }

@@ -1,8 +1,4 @@
-import composing.builds.AndroidX
-import composing.builds.BuildConfig
-import composing.builds.Testing
-import composing.builds.ThirdLib
-
+import composing.builds.*
 plugins {
     id 'com.android.library'
     id 'composing.builds'
@@ -66,11 +62,11 @@ dependencies {
     implementation AndroidX.Lifecycle.viewModelKtx
     implementation AndroidX.Lifecycle.lcyExt
 
-    implementation ThirdLib.Sketch.sketch
-    implementation ThirdLib.Sketch.sketchGif
-    implementation ThirdLib.Glide.glide
-    implementation ThirdLib.Glide.glideCompiler
-    implementation ThirdLib.Fastjson.fastjson
+    implementation Lib.sketch
+    implementation Lib.sketchGif
+    implementation Lib.glide
+    implementation Lib.glideCompiler
+    implementation Lib.fastjson
 
 
 }

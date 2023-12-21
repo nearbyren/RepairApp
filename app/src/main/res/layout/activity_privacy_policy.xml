@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_bg_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacy_policy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="用户私隱政策"
+            android:textColor="@color/info_292F3A"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_ll_root" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacy_policy_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="欢迎您使用IAPP (“我们”)的产品和/服务，我们非常重视您的隐私信息和您的个人信息，并会尽全力保护您的个人信息安全可靠。l企服APP是指由“深圳市中港星科技企业服务中心有限公司”享有所有权和/或运营权的移动应用”企服”的名称。为说明本公司会如何收集使用和存储您的个人信息及您享有何种权利，我们将通过本指引向您阐述相关事宜，其中要点如下"
+            android:textColor="@color/info_666666"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/privacy_policy_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="请您在继续使用I企服时，务必认真仔细阅读并确认个分理解本隐私政策全部规则和要点，并确认您已经死,理解本隐私政策所写明的内容(重点内容我们会使用粗体或下划线方式表示)。一旦您选择使用或在我们更新本隐私政策后(我们会及时提示您更新的情况)继续使用我们的产品和服务，即视为您同意本隐私政策(含更新版本)的全部内容，同意我们按本隐私政策收集、使用、共享和处理您的相关信息。"
+            android:textColor="@color/info_666666"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/privacy_policy_content" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

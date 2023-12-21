@@ -10,17 +10,25 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <!--菜單圖標字體間距-->
     <style name="bottom_navigation_view_text" parent="@android:style/TextAppearance.Small">
         <item name="android:paddingTop">4dp</item>
         <item name="android:paddingBottom">4dp</item>
     </style>
 
+    <!--菜單紅點提示-->
     <style name="Badge">
-        <item name="android:layout_width">@dimen/dp_8</item>
-        <item name="android:layout_height">@dimen/dp_8</item>
+        <item name="android:layout_width">@dimen/dp_5</item>
+        <item name="android:layout_height">@dimen/dp_5</item>
         <item name="android:background">@drawable/menu_bq_bg_circle</item>
         <item name="android:backgroundTint">#FF0000</item>
         <item name="android:backgroundTintMode">screen</item>
+    </style>
+
+    <!--啟動頁-->
+    <style name="launcher_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/launcher_bg</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
 </resources>

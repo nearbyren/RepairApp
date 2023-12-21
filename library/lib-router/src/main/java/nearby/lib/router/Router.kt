@@ -3,6 +3,7 @@ package nearby.lib.router
 import android.app.Application
 import android.net.Uri
 import com.alibaba.android.arouter.launcher.ARouter
+import kotlin.properties.Delegates
 
 /**
  * @description: ARouter工具类
@@ -10,11 +11,17 @@ import com.alibaba.android.arouter.launcher.ARouter
  */
 object Router {
 
+
+    private var openRouter: Boolean = false
+    fun isOpen(): Boolean {
+        return openRouter
+    }
     fun init(context: Application, debug: Boolean) {
         if (debug) {
             ARouter.openLog()
             ARouter.openDebug()
         }
+        openRouter = true
         ARouter.init(context)
     }
 

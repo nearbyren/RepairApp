@@ -26,14 +26,52 @@
         <meta-data
             android:name="design_width_in_dp"
             android:value="360" />
+
         <activity
             android:name="com.repair.apps.MainActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name="com.repair.apps.SignInLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.SubmitCardActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.AboutUsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.PrivacyPolicyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.RermsDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.CommonProblemActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.EditEmailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.EditPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.LauncherActivity"
+            android:theme="@style/launcher_theme"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.repair.apps.ActivateActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

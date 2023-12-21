@@ -9,18 +9,19 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.repair.apps.R
+import com.repair.apps.model.AdBannerDto
 import com.youth.banner.adapter.BannerAdapter
 
-class ImageAdapter(var context: Context, imageUrls: List<Advertise>) : BannerAdapter<Advertise, ImageAdapter.ImageHolder>(imageUrls) {
+class ImageAdapter(var context: Context, imageUrls: List<AdBannerDto>) : BannerAdapter<AdBannerDto, ImageAdapter.ImageHolder>(imageUrls) {
 
     override fun onCreateHolder(parent: ViewGroup?, viewType: Int): ImageHolder {
-        val layout = LayoutInflater.from(context).inflate(R.layout.index_ad_item_img, parent, false)
+        val layout = LayoutInflater.from(context).inflate(R.layout.item_ad_img, parent, false)
 //        //通过裁剪实现圆角
 //        BannerUtils.setBannerRound(layout, 20f)
         return ImageHolder(layout)
     }
 
-    override fun onBindView(holder: ImageHolder, advertise: Advertise, position: Int, size: Int) {
+    override fun onBindView(holder: ImageHolder, advertise: AdBannerDto, position: Int, size: Int) {
         if (advertise.pictureUrl.isNullOrEmpty()) {
             Glide.with( context).load(advertise.pictureUrlInt)
                 .placeholder(R.drawable.ad_banner)

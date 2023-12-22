@@ -1,16 +1,13 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.os.Bundle
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.repair.apps.R
 import com.repair.apps.adapter.ItemProblemAdapter
 import com.repair.apps.databinding.ActivityCommonProblemBinding
 import com.repair.apps.model.ProblemDto
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.mvvm.activity.BaseAppBindActivity
-import nearby.lib.uikit.recyclerview.BaseRecyclerAdapter
-import nearby.lib.uikit.recyclerview.BaseViewHolder
 import nearby.lib.uikit.recyclerview.SpaceItemDecoration
 import nearby.lib.uikit.widgets.dpToPx
 

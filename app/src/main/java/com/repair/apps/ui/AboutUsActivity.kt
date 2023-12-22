@@ -1,4 +1,4 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.content.Intent
 import android.os.Bundle

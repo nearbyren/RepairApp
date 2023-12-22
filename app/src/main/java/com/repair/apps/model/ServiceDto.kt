@@ -5,4 +5,9 @@ package com.repair.apps.model
  * @created on: 2023/12/18 9:45 PM
  * @description:
  */
-data class ServiceDto(var s: String)
+data class ServiceDto(
+    var schoolName: String,
+    var schoolNo: String,
+    var statusText: String,
+    var status: Int
+)

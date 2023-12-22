@@ -1,8 +1,7 @@
-package com.repair.apps
+package com.repair.apps.uitl
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.repair.apps.fragment.IndexFragment4
 import java.lang.reflect.Method
 
 /**
@@ -26,7 +25,8 @@ object  SPreUtil {
      */
     fun put(context: Context?, key: String?, value: Any) {
         if (context == null) return
-        val sp = context.getSharedPreferences(FILE_NAME,
+        val sp = context.getSharedPreferences(
+            FILE_NAME,
             Context.MODE_PRIVATE)
         val editor = sp.edit()
         if (value is String) {
@@ -55,7 +55,8 @@ object  SPreUtil {
      */
     operator fun get(context: Context?, key: String?, defaultObject: Any?): Any? {
         if (context == null) return null
-        val sp = context.getSharedPreferences(FILE_NAME,
+        val sp = context.getSharedPreferences(
+            FILE_NAME,
             Context.MODE_PRIVATE)
         if (defaultObject is String) {
             return sp.getString(key, defaultObject as String?)
@@ -78,7 +79,8 @@ object  SPreUtil {
      * @param key
      */
     fun remove(context: Context, key: String?) {
-        val sp = context.getSharedPreferences(FILE_NAME,
+        val sp = context.getSharedPreferences(
+            FILE_NAME,
             Context.MODE_PRIVATE)
         val editor = sp.edit()
         editor.remove(key)
@@ -91,7 +93,8 @@ object  SPreUtil {
      * @param context
      */
     fun clear(context: Context) {
-        val sp = context.getSharedPreferences(FILE_NAME,
+        val sp = context.getSharedPreferences(
+            FILE_NAME,
             Context.MODE_PRIVATE)
         val editor = sp.edit()
         editor.clear()
@@ -106,7 +109,8 @@ object  SPreUtil {
      * @return
      */
     fun contains(context: Context, key: String?): Boolean {
-        val sp = context.getSharedPreferences(FILE_NAME,
+        val sp = context.getSharedPreferences(
+            FILE_NAME,
             Context.MODE_PRIVATE)
         return sp.contains(key)
     }
@@ -118,7 +122,8 @@ object  SPreUtil {
      * @return
      */
     fun getAll(context: Context): Map<String?, *>? {
-        val sp = context.getSharedPreferences(FILE_NAME,
+        val sp = context.getSharedPreferences(
+            FILE_NAME,
             Context.MODE_PRIVATE)
         return sp.all
     }

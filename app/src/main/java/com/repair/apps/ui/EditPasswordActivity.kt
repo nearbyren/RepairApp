@@ -1,9 +1,10 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.os.Bundle
 import android.text.TextUtils
-import com.repair.apps.databinding.ActivityEditEmailBinding
+import com.repair.apps.R
 import com.repair.apps.databinding.ActivityEditPasswordBinding
+import com.repair.apps.uitl.SPreUtil
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.base.uitl.ToastUtils
 import nearby.lib.mvvm.activity.BaseAppBindActivity

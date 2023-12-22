@@ -3,14 +3,14 @@ package com.repair.apps.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
-import com.repair.apps.AboutUsActivity
-import com.repair.apps.CommonProblemActivity
-import com.repair.apps.EditEmailActivity
-import com.repair.apps.EditPasswordActivity
-import com.repair.apps.PrivacyPolicyActivity
+import com.repair.apps.ui.AboutUsActivity
+import com.repair.apps.ui.CommonProblemActivity
+import com.repair.apps.ui.EditEmailActivity
+import com.repair.apps.ui.EditPasswordActivity
+import com.repair.apps.ui.PrivacyPolicyActivity
 import com.repair.apps.R
-import com.repair.apps.RermsDetailsActivity
-import com.repair.apps.SPreUtil
+import com.repair.apps.ui.RermsDetailsActivity
+import com.repair.apps.uitl.SPreUtil
 import com.repair.apps.databinding.FragmentIndex4Binding
 import com.repair.apps.dialog.SignOutDialogFragment
 import com.repair.apps.http.IndexViewModel
@@ -96,6 +96,5 @@ class IndexFragment4 : BaseAppBVMFragment<FragmentIndex4Binding, IndexViewModel>
                 }
             }
         }
-
     }
 }

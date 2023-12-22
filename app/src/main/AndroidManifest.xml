@@ -10,6 +10,9 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <!--要求设备硬件必须支持蓝牙-->
     <uses-feature
         android:name="android.hardware.bluetooth"
@@ -28,38 +31,7 @@
             android:value="360" />
 
         <activity
-            android:name="com.repair.apps.MainActivity"
-            android:exported="true">
-
-        </activity>
-
-        <activity
-            android:name="com.repair.apps.SignInLoginActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.SubmitCardActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.AboutUsActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.PrivacyPolicyActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.RermsDetailsActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.CommonProblemActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.EditEmailActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.EditPasswordActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.repair.apps.LauncherActivity"
-            android:theme="@style/launcher_theme"
+            android:name="com.repair.apps.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,8 +40,39 @@
             </intent-filter>
 
         </activity>
+
         <activity
-            android:name="com.repair.apps.ActivateActivity"
+            android:name="com.repair.apps.ui.SignInLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.SubmitCardActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.AboutUsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.PrivacyPolicyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.RermsDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.CommonProblemActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.EditEmailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.EditPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.repair.apps.ui.LauncherActivity"
+            android:theme="@style/launcher_theme"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.repair.apps.ui.ActivateActivity"
             android:exported="true">
 
         </activity>

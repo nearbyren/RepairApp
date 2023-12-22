@@ -1,10 +1,10 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.os.Bundle
+import com.repair.apps.R
 import com.repair.apps.databinding.ActivityLauncherBinding
 import com.repair.apps.http.IndexViewModel
 import nearby.lib.mvvm.activity.BaseAppBVMActivity
-import nearby.lib.mvvm.activity.BaseAppBindActivity
 
 
 class LauncherActivity : BaseAppBVMActivity<ActivityLauncherBinding, IndexViewModel>() {

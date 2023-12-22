@@ -1,4 +1,4 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.os.Bundle
 import android.widget.ImageView
@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.repair.apps.R
 import com.repair.apps.databinding.ActivityMainBinding
 import com.repair.apps.fragment.IndexFragment1
 import com.repair.apps.fragment.IndexFragment2
 import com.repair.apps.fragment.IndexFragment3
 import com.repair.apps.fragment.IndexFragment4
-import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.mvvm.activity.BaseAppBindActivity
 
 
@@ -91,4 +91,6 @@ class MainActivity : BaseAppBindActivity<ActivityMainBinding>() {
             }
         }
     }
+
+
 }

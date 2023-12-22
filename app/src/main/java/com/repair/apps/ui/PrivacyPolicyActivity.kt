@@ -1,6 +1,7 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.os.Bundle
+import com.repair.apps.R
 import com.repair.apps.databinding.ActivityPrivacyPolicyBinding
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.mvvm.activity.BaseAppBindActivity

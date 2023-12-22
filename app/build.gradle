@@ -210,5 +210,7 @@ dependencies {
     api 'me.jessyan:autosize:1.2.1'
     api Lib.youth
     api "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    //知乎相冊
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
 
 }

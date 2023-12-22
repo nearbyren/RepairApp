@@ -1,9 +1,8 @@
-package com.repair.apps
+package com.repair.apps.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.Gravity
+import com.repair.apps.R
 import com.repair.apps.databinding.ActivitySignInLoginBinding
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.base.uitl.ToastUtils
@@ -66,7 +65,6 @@ class SignInLoginActivity : BaseAppBindActivity<ActivitySignInLoginBinding>() {
 //                SPreUtil.put(this@SignInLoginActivity, "password", password.toString())
                 navigate(SubmitCardActivity::class.java)
             }
-            finishPage(this)
         }
     }
 

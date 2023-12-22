@@ -1,8 +1,7 @@
-package com.repair.apps
+package com.repair.apps.ui
 
 import android.os.Bundle
-import android.view.Gravity
-import com.repair.apps.databinding.ActivitySignInLoginBinding
+import com.repair.apps.R
 import com.repair.apps.databinding.ActivitySubmitCardBinding
 import nearby.lib.base.bar.BarHelperConfig
 import nearby.lib.base.uitl.ToastUtils

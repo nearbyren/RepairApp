@@ -213,6 +213,47 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#CAEEEEEE"
+                        app:layout_constraintTop_toBottomOf="@+id/cl_change_password" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_identity"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_58"
+                        app:layout_constraintTop_toBottomOf="@+id/line3">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/identity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:gravity="center"
+                            android:text="切換身份"
+                            android:textColor="@color/info_22222"
+                            android:textSize="@dimen/sp_16"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/identity_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:src="@drawable/icon_next"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <androidx.constraintlayout.helper.widget.Flow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            app:constraint_referenced_ids="identity,identity_icon"
+                            app:flow_verticalAlign="center"
+                            app:flow_wrapMode="chain" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -221,9 +262,8 @@
                     android:id="@+id/guideline1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="@dimen/dp_210" />
+                    app:layout_constraintGuide_begin="@dimen/dp_280" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView

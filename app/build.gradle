@@ -1,17 +1,20 @@
 import composing.builds.*
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.kapt'
     id 'com.tencent.vasdolly'//VasDolly打包插件
     id 'composing.builds'
+    id 'com.tencent.android.tpns'
+
 }
 android {
 
     compileSdk BuildConfig.compileSdk //编译的sdk
-    namespace "com.repair.apps"
+    namespace "sky.palace.construction"
     defaultConfig {
-        applicationId "com.repair.apps"
+        applicationId "sky.palace.construction"
         minSdk BuildConfig.minSdk //最低支持版本
         targetSdk BuildConfig.targetSdk //支持的目标版本
         versionCode BuildConfig.versionCode
@@ -19,10 +22,14 @@ android {
         resConfigs "zh"   //如果应用没有做国际化，可以让应用仅支持 中文的资源配置
         multiDexEnabled true//dex分包支持
         ndk {
-            //选择要添加的对应cpu类型的.so库。
-            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'arm64-v8a', 'x86_64'
-            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+            //可以根据需要来自行选择并添加对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            //还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
+        manifestPlaceholders = [
+
+                XG_ACCESS_ID : "1530004122",
+                XG_ACCESS_KEY: "AYO3NNU6UT9R",]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"//测试脚本
     }
@@ -185,8 +192,7 @@ rebuildChannel {
     channelFile = file("channel.txt")
     /**
      * 基础包的路径 baseReleaseApk
-     * 渠道包输出目录 releaseOutputDir
-     */
+     * 渠道包输出目录 releaseOutputDir*/
     baseApk = file("./${enviApk}/release/${enviApkName}")
     //渠道包输出目录
     outputDir = file("${channelApk}")
@@ -204,6 +210,7 @@ dependencies {
     api project(path: ':library:lib-netwrok')
     api project(path: ':library:lib-base')
     api project(path: ':library:lib-router')
+    api project(path: ':library:lib-signal')
     api Lib.smarttablayout
     api Lib.smarttablayoutUtils
     api AndroidX.constraintlayout.constraintLayout
@@ -212,5 +219,14 @@ dependencies {
     api "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     //知乎相冊
     implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    implementation 'com.ooimi:toastx:1.1.3'
+
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.1.0'      //核心必须依赖
+    implementation 'io.github.scwang90:refresh-header-classics:2.1.0'    //经典刷新头
+    implementation 'io.github.scwang90:refresh-footer-classics:2.1.0'    //经典加载
+    implementation 'io.github.scwang90:refresh-footer-ball:2.1.0'        //球脉冲加载
+
+    //腾讯云推送
+    implementation 'com.tencent.tpns:tpns:1.4.3.4-release'
 
 }

@@ -60,9 +60,6 @@
                     android:id="@+id/status23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp_16"
-                    android:layout_marginTop="@dimen/dp_12"
-                    android:paddingBottom="@dimen/dp_20"
                     android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@+id/top">
 
@@ -71,6 +68,7 @@
                         android:id="@+id/baojiadan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_24"
                         android:text="報價單"
                         android:textColor="@color/info_22222"
                         android:textSize="@dimen/sp_16"
@@ -82,7 +80,9 @@
                         android:id="@+id/cl_baojiaimg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_24"
                         android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_20"
                         android:background="@drawable/index_index_bg_white2"
                         android:padding="@dimen/dp_8"
                         app:layout_constraintTop_toBottomOf="@+id/baojiadan">
@@ -143,6 +143,8 @@
                     android:id="@+id/filled"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
                     android:paddingBottom="@dimen/dp_20"
                     android:visibility="gone"
                     app:layout_constraintTop_toBottomOf="@+id/top">
@@ -151,7 +153,6 @@
                         android:id="@+id/cl_fapiao"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/dp_20"
                         android:background="@drawable/index_index_bg_white2"
                         android:padding="@dimen/dp_8"
                         app:layout_constraintTop_toTopOf="parent">
@@ -187,7 +188,8 @@
                         android:id="@+id/cl_picture"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_20"
                         android:background="@drawable/edit_bg_layer_list"
                         app:layout_constraintTop_toBottomOf="@+id/cl_fapiao">
 

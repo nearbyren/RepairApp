@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_item21"
+        android:title="服務清單"
+            android:icon="@drawable/menu_selector_02" />
+
+    <item
+        android:id="@+id/navigation_item22"
+        android:title="賬戶"
+        android:icon="@drawable/menu_selector_04" />
+
+
+</menu>

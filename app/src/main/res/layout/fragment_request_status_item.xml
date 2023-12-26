@@ -67,7 +67,7 @@
             android:id="@+id/detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_24"
             android:layout_marginTop="@dimen/dp_16"
             android:text="維修請求"
             android:textColor="@color/info_22222"
@@ -76,21 +76,25 @@
             app:layout_constraintTop_toBottomOf="@+id/info" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/info_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
             android:background="@drawable/index_index_bg_white2"
-            android:padding="@dimen/dp_8"
             app:layout_constraintTop_toBottomOf="@+id/detail">
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/school_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_24"
                 android:text="學校大門"
                 android:textColor="@color/info_22222"
                 android:textSize="@dimen/sp_14"
@@ -102,6 +106,7 @@
                 android:id="@+id/school_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_7"
                 android:text="描述詳情:  此位置的文字資料是暫時性質"
                 android:textColor="@color/info_22222"
@@ -113,6 +118,7 @@
                 android:id="@+id/urgent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_7"
                 android:text="是否緊急:  是"
                 android:textColor="@color/info_22222"
@@ -125,8 +131,9 @@
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_7"
-                android:text="要求維修日期:   9月1日"
+                android:text="要求維修日期：9月1日"
                 android:textColor="@color/info_22222"
                 android:textSize="@dimen/sp_12"
                 app:layout_constraintLeft_toLeftOf="parent"
